@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-// Estrutura para armazenar os dados das cartas
+# Estrutura para armazenar os dados das cartas
 typedef struct {
     char estado[50];
     int codigo;
@@ -16,7 +16,7 @@ typedef struct {
     float super_poder;
 } Carta;
 
-// Função para calcular os atributos derivados da carta
+# Função para calcular os atributos derivados da carta
 void calcular_atributos(Carta *carta) {
     carta->densidade_populacional = carta->populacao / carta->area;
     carta->pib_per_capita = carta->pib / carta->populacao;
@@ -24,7 +24,7 @@ void calcular_atributos(Carta *carta) {
                          carta->pib_per_capita + (1 / carta->densidade_populacional);
 }
 
-// Função para inserir dados da carta
+# Função para inserir dados da carta
 void inserir_carta(Carta *carta) {
     printf("Digite o estado: ");
     scanf("%s", carta->estado);
@@ -44,7 +44,7 @@ void inserir_carta(Carta *carta) {
     calcular_atributos(carta);
 }
 
-// Função para comparar e exibir os resultados
+# Função para comparar e exibir os resultados
 void comparar_cartas(Carta c1, Carta c2) {
     printf("\nComparação de Cartas:\n");
     printf("População: Carta %d venceu (%d)\n", c1.populacao > c2.populacao ? 1 : 2, c1.populacao > c2.populacao);
